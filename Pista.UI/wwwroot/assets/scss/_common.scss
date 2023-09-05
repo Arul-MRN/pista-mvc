@@ -1,0 +1,19 @@
+.section-header {
+    padding: 15px 0;
+}
+
+.header-with-line {
+    display: flex;
+    align-items: center;
+}
+
+.header-with-line .line {
+    flex: 1;
+    border-top: 1px solid #000;
+}
+
+.header-with-line .text {
+    padding: 0 15px;
+    font-weight: 500;
+    color: $primary-color;
+}

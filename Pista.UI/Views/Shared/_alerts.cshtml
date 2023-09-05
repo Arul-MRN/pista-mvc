@@ -1,0 +1,34 @@
+﻿@using Pista.UI.Application.Constants;
+
+
+
+@if (TempData[AlertConstant.Success] != null)
+{
+    <script>
+        swal("Success", '@TempData[AlertConstant.Success]', "success");
+    </script>
+}
+
+
+@if (TempData[AlertConstant.Error] != null)
+{
+    <script>
+        swal("Error", '@TempData[AlertConstant.Error]', "error");
+    </script>
+}
+
+@if (TempData[AlertConstant.Info] != null)
+{
+    <script>
+        swal("Info", '@TempData[AlertConstant.Info]', "info");
+    </script>
+}
+
+@if (TempData[AlertConstant.Warning] != null)
+{
+    <script>
+        swal("Warning", '@TempData[AlertConstant.Warning]', "warning");
+    </script>
+}
+
+

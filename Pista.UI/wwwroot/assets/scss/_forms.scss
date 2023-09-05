@@ -1,0 +1,20 @@
+.form {
+    padding: 10px 0;
+}
+
+.col-form-label {
+    font-size: 15px;
+    text-align: right;
+    padding-top: calc(0.4375rem + var(--bs-border-width));
+    padding-bottom: calc(0.4375rem + var(--bs-border-width));
+}
+
+.form-control {
+    border-color: #cccccc;
+}
+
+.form-control:focus {
+    border-color: $primary-color;
+    outline: 0;
+    box-shadow: none;
+}
