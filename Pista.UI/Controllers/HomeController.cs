@@ -16,7 +16,7 @@ namespace Pista.UI.Controllers
 
         public IActionResult Index()
         {
-            TempData[AlertConstant.Success] = "Show this message";
+            TempData[AlertConstant.Success] = "Successfully created";
             return View();
         }
 

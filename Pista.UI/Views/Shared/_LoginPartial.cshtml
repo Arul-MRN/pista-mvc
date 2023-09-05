@@ -1,0 +1,84 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div class="menuright">
+    @if (SignInManager.IsSignedIn(User))
+{
+        <div class="item search-bar">
+            <input type="text" name="" id="search" class="form-control" placeholder="Search" />
+            <span>
+                <i data-feather="search" width="19" height="19" stroke-width="2.2"></i>
+            </span>
+        </div>
+        <div class="item">
+            <a href="#">
+                <i data-feather="bell" stroke-width="2"></i>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <i data-feather="help-circle" stroke-width="2"></i>
+            </a>
+        </div>
+        <div class="item">
+            <a href="#">
+                <i data-feather="settings" stroke-width="2"></i>
+            </a>
+        </div>
+
+        <div class="item profile">
+            <div class="profile-icon"></div>
+        </div>
+        <div class="item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
+                <button type="submit" style="border:0;padding:0;margin:0;background:transparent;">
+                    <i data-feather="log-out" stroke-width="2"></i>
+                </button>
+            </form>
+           @* <a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <i data-feather="log-out" stroke-width="2"></i>
+            </a>*@
+        </div>
+}
+
+    else
+    {
+        <div class="item">
+            <a asp-area="Identity" asp-page="/Account/Register">
+                <i data-feather="user-plus" stroke-width="2"></i>
+            </a>
+        </div>
+        <div class="item">
+            <a asp-area="Identity" asp-page="/Account/Login">
+                <i data-feather="log-in" stroke-width="2"></i>
+            </a>
+        </div>
+    }
+
+</div>
+
+@*<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+        <a  class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+    </li>
+    <li class="nav-item">
+        <form  class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+            <button  type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+        </form>
+    </li>
+
+
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
+</ul>*@
