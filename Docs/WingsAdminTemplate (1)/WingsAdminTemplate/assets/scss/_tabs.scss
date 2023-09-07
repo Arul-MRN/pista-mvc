@@ -1,0 +1,41 @@
+nav.sub-menu-tab {
+    background: #ffffff;
+    border-radius: 8px !important;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.nav-link a{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+#nav-tabContent {
+    height: 100%;
+}
+
+#nav-tabContent.tab-content .tab-pane {
+    height: 100%;
+}
+
+.sub-menu-tab #nav-tab {
+    border: 0;
+}
+
+.sub-menu-tab .nav-tabs .nav-link {
+    font-size: 14px;
+    padding: 12px 32px;
+    border: 0;
+    background: $white;
+    color: $black;
+    border-radius: 0;
+    position: relative;
+}
+
+.sub-menu-tab .nav-tabs .nav-link.active {
+    background: $primary-color;
+    color: $white;
+}

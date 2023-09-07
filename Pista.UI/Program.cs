@@ -20,6 +20,22 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+    //app.UseDirectoryBrowser();
+    //var provider = new FileExtensionContentTypeProvider();
+    //provider.Mappings[".scss"] = "text/css";
+    //app.UseStaticFiles(new StaticFileOptions()
+    //{
+    //    ContentTypeProvider = provider
+    //});
+
+    //var provider = new FileExtensionContentTypeProvider();
+    //app.UseStaticFiles(new StaticFileOptions()
+    //{
+    //    FileProvider = new PhysicalFileProvider(
+    //         Path.Combine(Directory.GetCurrentDirectory(), @"SassyStyles")),
+    //    RequestPath = new PathString("/SassyStyles"),
+    //    ContentTypeProvider = provider
+    //});
 }
 else
 {

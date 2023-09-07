@@ -5,7 +5,7 @@
 <div class="menuright">
     @if (SignInManager.IsSignedIn(User))
 {
-        <div class="item search-bar">
+       @* <div class="item search-bar">
             <input type="text" name="" id="search" class="form-control" placeholder="Search" />
             <span>
                 <i data-feather="search" width="19" height="19" stroke-width="2.2"></i>
@@ -29,7 +29,10 @@
 
         <div class="item profile">
             <div class="profile-icon"></div>
-        </div>
+        </div>*@
+        <div class="item me-4 fw-bold">
+            @User.Identity?.Name
+            </div>
         <div class="item">
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
                 <button type="submit" style="border:0;padding:0;margin:0;background:transparent;">
@@ -44,11 +47,11 @@
 
     else
     {
-        <div class="item">
+       @* <div class="item">
             <a asp-area="Identity" asp-page="/Account/Register">
                 <i data-feather="user-plus" stroke-width="2"></i>
             </a>
-        </div>
+        </div>*@
         <div class="item">
             <a asp-area="Identity" asp-page="/Account/Login">
                 <i data-feather="log-in" stroke-width="2"></i>

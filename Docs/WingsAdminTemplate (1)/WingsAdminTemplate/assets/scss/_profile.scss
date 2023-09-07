@@ -1,0 +1,124 @@
+#profile,
+#profile>*,
+#profile>*>* {
+    height: 100%;
+}
+
+#profile .form-control {
+    background: $profile-input-bg !important;
+    border-color: $profile-input-border !important;
+    resize: none;
+}
+
+#profile .left-section,
+#profile .right-section {
+    position: relative;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#profile .block-value.non-editable {
+    padding: 0 12px;
+}
+
+#profile .block {
+    position: relative;
+    padding: 22px 10px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+    background: $white;
+}
+
+#profile .block.profile-info {
+    text-align: center;
+}
+
+#profile .profile-icon-large {
+    width: 70px;
+    height: 70px;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 50px;
+    background: #d9d9d9;
+}
+
+.profile-info .name {
+    margin-bottom: 7px;
+}
+
+.profile-info .name .form-control {
+    font-weight: 600;
+    color: $primary-color;
+    text-align: center;
+}
+
+.profile-info .profile-id {
+    font-style: italic;
+    font-weight: 200;
+}
+
+#profile .form-control:read-only {
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.block-title {
+    color: $profile-label;
+    margin-bottom: 11px;
+    padding-left: 11px;
+}
+
+.profile-download-btn {
+    width: calc(100% - 24px);
+    margin: 0 12px;
+    background: #EBEBF5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85px;
+    border-radius: 10px;
+    color: #696CF5;
+    font-weight: 700;
+    flex-direction: column;
+}
+
+.profile-download-btn svg {
+    margin-bottom: 3px;
+    display: block;
+}
+
+#profile .last-updated {
+    padding: 8px 12px 0;
+    color: #6f6f6f;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+#profile .certificate-verification svg {
+    display: block;
+    padding: 5px;
+    stroke-width: 5;
+    border-radius: 25px;
+    background: #3EA90C;
+    color: #ffffff;
+}
+
+#profile .profile-edit {
+    position: absolute;
+    top: 22px;
+    right: 22px;
+}
+
+#profile .profile-edit svg {
+    stroke-width: 2.5;
+    opacity: 0.5;
+}
+
+#profile .profile-edit:hover svg {
+    opacity: 0.8;
+    cursor: pointer;
+    color: $primary-color;
+}

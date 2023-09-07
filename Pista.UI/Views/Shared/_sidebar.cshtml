@@ -1,0 +1,45 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <div class="sidebar">
+        <div class="logo-container">
+            <div class="image"></div>
+        </div>
+        <div class="quick-links"></div>
+        <div class="menu">
+            <nav class="navbar navbar-expand-md side-navbar">
+                <div class="sidebar-collapse">
+                    <ul class="nav metismenu" id="side-menu">
+                        <li>
+                            <a href="dashboard.html" data-toggle="tooltip" data-original-title="" title="">
+                                <i data-feather="grid"></i>
+                                <span class="nav-label">Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="User" data-toggle="tooltip" data-original-title="" title="">
+                                <i data-feather="user"></i>
+                                <span class="nav-label">User</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-controller="Employee" data-toggle="tooltip" data-original-title="" title="">
+                                <i data-feather="user"></i>
+                                <span class="nav-label">Employees</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html" data-toggle="tooltip" data-original-title="" title="">
+                                <i data-feather="user"></i>
+                                <span class="nav-label">Task Scheduling</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+}

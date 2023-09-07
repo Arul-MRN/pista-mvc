@@ -1,0 +1,82 @@
+.menu .navbar li {
+    width: 100%;
+}
+
+.menu .nav a {
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: $black;
+}
+
+.menu .nav a svg {
+    margin-right: 10px;
+}
+
+.menu .nav .submenu-icon {
+    float: right;
+}
+
+.menu .nav .submenu-icon svg {
+    margin-right: 0 !important;
+    width: 20px;
+    height: 20px;
+}
+
+.menu .nav .nav-label {
+    padding: 1px 0 0px;
+    display: inline-block;
+}
+
+.panel .header {
+    margin-bottom: 30px;
+}
+
+.page-name .h1{
+    margin-bottom: 0;
+    margin-top: 6px;
+}
+
+.menuright {
+    display: flex;
+    float: right;
+}
+
+.search-bar {
+    position: relative;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    width: 300px;
+    border: 0;
+    font-size: 15px;
+}
+
+.search-bar span {
+    position: absolute;
+    top: 4px;
+    right: 15px;
+}
+
+.menuright .item a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 12px;
+    color: #000000;
+}
+
+.menuright .item.profile {
+    margin-left: 12px;
+}
+
+.menuright .item.profile .profile-icon {
+    width: 35px;
+    height: 35px;
+    background: #d9d9d9;
+    border-radius: 30px;
+}
